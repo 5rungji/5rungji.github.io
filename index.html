@@ -3,15 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>기술 이력서</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/1p_main.css">
+    <link rel="stylesheet" type="text/css" href="./css/2p_profile.css">
+    <link rel="stylesheet" type="text/css" href="./css/3p_skill.css">
+    <link rel="stylesheet" type="text/css" href="./css/4p_project.css">
+    <link rel="stylesheet" type="text/css" href="./css/5p_contact.css">
     <script src="https://kit.fontawesome.com/44bcb903a4.js" crossorigin="anonymous"></script>
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="./js/jquery.js"></script>
 </head>
 
 <body class="scroll">
@@ -23,7 +26,6 @@
 <!-- main -->
         <section id="main">
             <header id="header">
-                <div class="logo focus-scale"><a class="f-jq" href="#">OH! YR.</a></div>
                 <ul class="menu">
                     <li class="focus-scale f-jq"><a href="#">main</a></li>
                     <li class="focus-scale f-jq"><a href="#">proflie</a></li>
@@ -32,35 +34,66 @@
                     <li class="focus-scale f-jq"><a href="#">finish</a></li>
                 </ul>
             </header>
-            <h1>
-                <p>Hello,</p> I'm <span>Oh You Ri</span>
-                <p>Web Developer</p>
-            </h1>
+            <p>
+                Hello, <br>
+                <span>I'm <strong>Oh You Ri</strong> </span><br>
+                Web Developer
+            </p>
+        </section>
+        <!-- profile -->
+        <section id="profile">
+            <video muted autoplay loop>
+                <source src="./images/2p_back.mp4" type="video/mp4">
+            </video>
+        </section>
+        <!----------------- 스킬영역 --------------------->
+        <section id="skill">
+        </section>
+        <!----------------- 프로젝트영역 --------------------->
+        <section id="project" class="mobile">
+        </section>
+        <!----------------- 컨택영역 --------------------->
+        <section id="contact">
+            <article>
+                <p>Contact Me</p>
+                <span>
+                    항상 겸손한 자세로 배울 것입니다. <br>
+                    한 번의 만남으로 끝맺기 아쉬운 개발자가 되겠습니다.
+                </span>
+                <button></button>
+            </article>
         </section>
         <!-- 백그라운드 -->
-        <section id="bg">
+        <div id="bg">
             <div class="cursor-circle invisible"></div>
             <article>
                 <img class="bp-square" src="./images/pattern1.png" alt="background-pattern1">
                 <img class="bp-circle" src="./images/pattern2.png" alt="background-pattern2">
                 <img class="cht" src="./images/cht.png" alt="background-img1">
             </article>
-        </section>
+        </div>
         <!-- 퀵 버튼 -->
-        <section id="f-nav">
+        <div id="f-nav">
+            <div class="logo focus-scale"><a class="f-jq" href="#">OH! YR.</a></div>
             <article>
+                <div class="btn-nav invisible">
+                    <a><i class="fa-solid fa-bars f-jq"></i></a>
+                </div>
                 <div class="btn-scroll">
                     <a><i class="fa-solid fa-chevron-down"></i></a>
-                    <a class="invisible">02</a>
-                    <a class="invisible">03</a>
                 </div>
                 <p class="f-jq">                    
                     PHONE: +82 10-5633-2204 <br>
                     EMAILE: opel22@naver.com
                 </p>
             </article>
-        </section>
+        </div>
     </div>
+    <script src="./js/index.js"></script>
+    <script src="./js/1p_main.js"></script>
+    <script src="./js/2p_profile.js"></script>
+    <script src="./js/3p_skill.js"></script>
+    <script src="./js/4p_project.js"></script>
+    <script src="./js/5p_contact.js"></script>
 </body>
-
 </html>
