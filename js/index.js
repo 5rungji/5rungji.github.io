@@ -124,64 +124,85 @@ $(window).scroll(function () {
 		section = $(contents).eq(i);
 		tg = section.offset().top;
 
-		if(fcus == tg && i == 0){ 
+		if(fcus >= tg && i == 0){
 	//1page
+			if(fcus == tg){
 		// intro 인사말
-			mainH1();
+				mainH1();
 		// 배경패턴
-			bpCircle();
-			bpSquare();	
-			bpCht();
+				bpCircle();
+				bpSquare();	
+				bpCht();
+			}
+		// 글자색상
+			fNavColorLight();
 		// 네비버튼
 			$("#f-nav > article > .btn-nav").addClass("invisible");
 		//하단스크롤
-			$('.custom-scroll > article').animate({
+			$('.custom-scroll > article').stop().animate({
 				width: '20%'
 			},700);
 		//스크롤버튼페이지
 			$('.btn-scroll').html(`
 				<a><i class="fa-solid fa-chevron-down"></i></a>
 			`)
-		}else if(fcus == tg && i == 1){ 
+		}else if(fcus >= tg && i == 1){ 
 	//2page
+		// 글자색상
+			fNavColorDark();
+		//배경패턴
+			skillBackOff();
 		// 네비버튼
 			$("#f-nav > article > .btn-nav").removeClass("invisible");
 		//하단스크롤
-			$('.custom-scroll > article').animate({
+			$('.custom-scroll > article').stop().animate({
 				width: '40%'
 			},700);
 		//스크롤버튼페이지
 			$('.btn-scroll').html(`
 			<a>02</a>
 			`)
-		}else if(fcus == tg && i == 2){ 
+		}else if(fcus >= tg && i == 2){ 
 	//3page
+		// 글자색상
+			fNavColorLight();
+		//배경패턴
+			skillBackOn()
 		//하단스크롤
-			$('.custom-scroll > article').animate( {
+			$('.custom-scroll > article').stop().animate( {
 				width: '60%'
 			},700);
 		//스크롤버튼페이지
 			$('.btn-scroll').html(`
 			<a>03</a>
 			`)
-		}else if(fcus == tg && i == 3){ 
+		}else if(fcus >= tg && i == 3){ 
 	//4page
-		//배경패턴
-			contactBackOff()
+			if(fcus == tg){
+		// 배경패턴
+				bpCircle();
+				bpSquare();
+			}
+			skillBackOff();
+			contactBackOff();
+		// 글자색상
+			fNavColorLight();
 		//하단스크롤
-			$('.custom-scroll > article').animate( {
+			$('.custom-scroll > article').stop().animate( {
 				width: '80%'
 			},700);
 		//스크롤버튼페이지
 			$('.btn-scroll').html(`
 			<a>04</a>
 			`)
-		}else if(fcus == tg && i == 4){ 
+		}else if(fcus >= tg && i == 4){ 
 	//5page
+		//글자색상
+			fNavColorDark();
 		//배경
-			contactBackOn()
+			contactBackOn();
 		//하단스크롤
-			$('.custom-scroll > article').animate( {
+			$('.custom-scroll > article').stop().animate( {
 				width: '100%'
 			},700);
 		//스크롤버튼페이지
@@ -221,12 +242,12 @@ $(".cursor-circle").removeClass("invisible");
 // 기본 //
 $(window).click(function () {
 	$(".cursor-circle").stop().animate( {
-		width: '15px',
-		height: "15px"
+		width: '10px',
+		height: "10px"
 	},40);
 	$(".cursor-circle").delay(40).animate( {
-		width: '30px',
-		height: "30px"
+		width: '20px',
+		height: "20px"
 	});
 });
 
@@ -234,16 +255,65 @@ $(window).click(function () {
 $(function(){
 	$('.f-jq').mouseover(function(){
 		$(".cursor-circle").stop().animate( {
-			width: '70px',
-			height: "70px" 
+			width: '40px',
+			height: "40px" 
 		});
 	});	
 	$('.f-jq').mouseleave(function(){
 		$(".cursor-circle").stop().animate( {
-			width: '30px',
-			height: "30px"
+			width: '20px',
+			height: "20px"
 		});
 	});	
 })
 
+// 기타 총합 기능 //// 기타 총합 기능 //// 기타 총합 기능 //
+// 글자 색 바꾸기 //
+function fNavColorDark(){
+	// header 부분
+	$("#f-nav .logo > a, #f-nav > article > .btn-nav > a").css("color", 'rgb(250, 248, 235)');
+
+	$("#f-nav .logo > a").hover(
+		function(){
+			$(this).css("color", 'rgb(248, 140, 101)');
+		},function(){
+			$(this).css("color", 'rgb(250, 248, 235)');
+		}
+	)
+
+	$("#f-nav > article > .btn-nav > a").hover(
+		function(){
+			$(this).css("color", 'rgb(248, 140, 101)');
+		},function(){
+			$(this).css("color", 'rgb(250, 248, 235)');
+		}
+	)
+
+	//contact 부분
+	$("#f-nav > article > p").css("color", 'rgb(250, 248, 235)');
+}
+
+function fNavColorLight(){
+	// header 부분
+	$("#f-nav .logo > a, #f-nav > article > .btn-nav > a").css("color", 'rgb(92, 92, 92)');
+	$("#f-nav .logo > a").hover(
+		function(){
+			$(this).css("color", 'rgb(248, 140, 101)');
+		},function(){
+			$(this).css("color", 'rgb(92, 92, 92)');
+		}
+	)
+
+	$("#f-nav > article > .btn-nav > a").hover(
+		function(){
+			$(this).css("color", 'rgb(248, 140, 101)');
+		},function(){
+			$(this).css("color", 'rgb(92, 92, 92)');
+		}
+	)
+
+	//contact 부분
+	$("#f-nav > article > p").css("color", 'rgb(92, 92, 92)');
+
+}
 

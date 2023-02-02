@@ -4,9 +4,8 @@
 }
 
 
-/* [#bg] 백그라운드 *//* [#bg] 백그라운드 *//* [#bg] 백그라운드 *//* [#bg] 백그라운드 */
-#bg{
-    z-index: 1;
+/* [.bg] 백그라운드 *//* [.bg] 백그라운드 *//* [.bg] 백그라운드 *//* [.bg] 백그라운드 */
+.bg{
     width: 100%; height: 100vh;
     position: absolute;
     top: 0px; left: 0px;
@@ -16,31 +15,33 @@
 .cursor-circle{
     position: absolute;
     top: 0px; left: 0px;
-    width: 30px; height: 30px;
+    width: 20px; height: 20px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.1);
     transform: translate(-50%, -50%);
+    z-index: 99;
+    pointer-events: none; 
 }
 
 /* 배경패턴 *//* 배경패턴 */
-#bg > article{
+.bg > article{
     width: 100%; height: 100%;
     position: relative;
     overflow: hidden;
 }
 
-#bg > article > .bp-square{
+.bg > article > .bp-square{
     position: absolute;
     top: -50px; left: -100%;
 }
 
-#bg > article > .bp-circle{
+.bg > article > .bp-circle{
     position: absolute;
     bottom: -250px; right: -100%;
     transform: scaleX(-1);
 }
 
-#bg > article > .cht{
+.bg > article > .cht{
     position: absolute;
     bottom: 100px; left: 100%;
 }
@@ -59,6 +60,9 @@
     position: fixed;
     top: 0px; left: 20px;
     padding: 0px 50px;
+}
+
+#f-nav .logo > a{
     line-height: 120px;
     font-size: 21px;
     font-weight: 800;
@@ -75,13 +79,11 @@
 
 #f-nav > article > .btn-nav > a{
     font-size: 30px;
-    color: #ebebeb;
     line-height: 120px;
 }
 
 #f-nav > article > .btn-nav > a:hover{
     font-size: 30px;
-    color: #44ae99;
     line-height: 120px;
 }
 
@@ -90,7 +92,6 @@
 #f-nav > article > p{
     position: fixed;
     font-size: 12px;
-    color: #5c5c5c;
     bottom: 46px; left: 50px;
     z-index: 20;
 }
@@ -106,7 +107,7 @@
 }
 
 #f-nav > article > .btn-scroll:hover{
-    background-color: #44ae99;
+    background-color: rgb(86, 200, 211);
 }
 
 #f-nav > article > .btn-scroll > a{

@@ -1,0 +1,60 @@
+/* [#project] 4page *//* [#project] 4page *//* [#project] 4page *//* [#project] 4page */
+#project {
+    position: relative;
+    width: 100%; height:100vh;
+}
+
+#project > article {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1100px;
+}
+
+/* 플젝 */
+#project > article > p{
+    font-size: 36px;
+    font-weight: 800;
+}
+
+/* 플젝 이미지 */
+#project > article > .project-box{
+    width: 100%; height: 400px;
+    display: flex;
+    margin: 20px 0px;
+    background-color: #44aa50;
+}
+
+#project > article > .project-box > li{
+    display: block;
+    width: 25%;
+}
+
+#project > article > .project-box > li:hover{
+    background-color: aqua;
+    width: 100%;
+}
+
+/* project-footer *//* project-footer *//* project-footer */
+#project > article > .project-footer{
+    width: 1100px;
+}
+
+#project > article > .project-footer > li{
+    display: flex;
+    height: 30px;
+    position: relative;
+}
+
+#project > article > .project-footer > li > h3{
+    width: 500px;
+}
+
+#project > article > .project-footer > li > h3 > i{
+    padding-right: 6px;
+    color: rgb(74, 140, 138);
+}
+
+#project > article > .project-footer > li > h3 > img{
+    display: inline-block
+}

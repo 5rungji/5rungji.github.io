@@ -4,14 +4,15 @@
 // 배경
 function contactBackOn(){
 	$('#contact').css({
-		backgroundSize: '140%'
-	}).animate( {
-		backgroundSize: '120%'
+		backgroundSize: '200%'
+	}).stop().animate( {
+		backgroundSize: '160%'
 	},1000);
+
 }
 
 function contactBackOff(){
 	$('#contact').css({
-		backgroundSize: '140%'
+		backgroundSize: '200%'
 	});
 }

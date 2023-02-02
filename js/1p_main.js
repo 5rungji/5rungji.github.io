@@ -17,27 +17,27 @@ function mainH1(){
 
 // 원형 패턴
 function bpCircle(){
-	$("#bg > article > .bp-circle").css({
+	$(".bg > article > .bp-circle").css({
 		right: "-100%"
-	}).animate( {
+	}).animate({
 		right: "0px"
 	},800);
 }
 
 // 사각 패턴
 function bpSquare(){
-	$("#bg > article > .bp-square").css({
+	$(".bg > article > .bp-square").css({
 		left: "-100%"
-	}).animate( {
+	}).animate({
 		left: "0%"
 	},800);
 }
 
 // 캐릭터 이동
 function bpCht(){
-	$("#bg > article > .cht").css({
+	$(".bg > article > .cht").css({
 		left: "100%"
-	}).animate( {
+	}).animate({
 		left: "60%"
 	},900);
 }
