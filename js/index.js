@@ -134,8 +134,6 @@ $(window).scroll(function () {
 				bpSquare();	
 				bpCht();
 			}
-		// 글자색상
-			fNavColorLight();
 		// 네비버튼
 			$("#f-nav > article > .btn-nav").addClass("invisible");
 		//하단스크롤
@@ -148,8 +146,6 @@ $(window).scroll(function () {
 			`)
 		}else if(fcus >= tg && i == 1){ 
 	//2page
-		// 글자색상
-			fNavColorDark();
 		//배경패턴
 			skillBackOff();
 		// 네비버튼
@@ -164,8 +160,6 @@ $(window).scroll(function () {
 			`)
 		}else if(fcus >= tg && i == 2){ 
 	//3page
-		// 글자색상
-			fNavColorLight();
 		//배경패턴
 			skillBackOn()
 		//하단스크롤

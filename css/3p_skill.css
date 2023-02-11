@@ -14,10 +14,6 @@
     overflow: hidden;
 }
 
-#skill > article img{
-    height: 25px;
-}
-
 
 /* skill-mn *//* skill-mn *//* skill-mn */
 #skill > article > .skill-mn{
@@ -61,21 +57,47 @@
     background-color: rgba(74, 140, 138,0.6);
     border-radius: 10px;
     overflow: hidden;
-    padding: 30px;
+    padding: 30px 50px;
     color: rgb(255, 255, 255);
 }
 
+
+#skill > article > .skill-box > li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#skill > article > .skill-box img, svg{
+    display: block;
+    width: 50px; height: 50px;
+    margin: 5px;
+}
+
+#skill > article > .skill-box svg{
+    padding: 5px;
+    background-color: white;
+}
+
+
+/* Back */
 #skill > article > .skill-box > li:nth-child(1){
     opacity: 100%;
 }
 
+
+/* Front */
 #skill > article > .skill-box > li:nth-child(2){
     opacity: 0%;
 }
 
+
+/* Design */
 #skill > article > .skill-box > li:nth-child(3){
     opacity: 0%;
 }
+
 
 /* skill-footer *//* skill-footer *//* skill-footer */
 #skill > article > .skill-footer{

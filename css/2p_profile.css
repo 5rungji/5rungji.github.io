@@ -3,28 +3,127 @@
 #profile {
     position: relative;
     width: 100%; height:100vh;
-    overflow: hidden;
+    background-color: rgb(250, 248, 235);
 }
 
-#profile video {
-    display: block;
-    height: 150%; 
-    z-index: -99;
-    margin: 0 auto;
-}
-
-#profile > article {
+#profile > ul {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%; height: 400px;
+    width: 80%; height: auto;
     display: flex;
+    justify-content: space-between;
+    align-items: end;
 }
 
-#profile > article > div {
-    width: 50%; height: 400px;
-    background-color: rgba(250, 248, 235,0.3);
-    padding: 30px;
-    color: white;
+/* 프로필사진 + 이름 + 설명 */
+#profile > ul > .story{
+    min-width: 450px;
 }
 
+
+#profile > ul > .story > img{
+    overflow: hidden;
+    border-radius: 50%;    
+    width: 200px;
+    background-color: rgb(86, 200, 211);
+}
+
+#profile > ul > .story > h3{
+    position: relative;
+    width: 320px; 
+    font-size: 40px;
+    font-weight: 900;
+    margin: 10px 0px;
+}
+
+#profile > ul > .story > h3::before{
+    content: '';
+    z-index: -1;
+    position: absolute; left: -5px; bottom: 0px;
+    width: 100%; height: 20px;
+    background-color: rgba(86, 200, 211, 0.3);
+    border-radius: 5px;
+}
+
+#profile > ul > .story > span{
+    font-size: 21px;
+}
+
+
+#profile > ul > .story > div{
+    height: 150px;
+    border-left: 0.8px solid rgb(86, 200, 211);
+    margin: 20px 0px;
+}
+
+
+#profile > ul > .story > p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+/* 생년월일 + 이메일 + 자격증 등 */
+#profile > ul > .my-skill{
+    max-width: 750px;
+    /* min-width: 700px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    font-weight: 400;
+}
+
+#profile > ul > .my-skill > p {
+    min-width: 350px;
+    width: 50%;
+    line-height: 33px;
+    margin-top: 50px;
+}
+
+#profile > ul > .my-skill > p > .quality{
+    display: inline-block;
+    position: relative;
+    width: 180px; height: 4px;
+    margin: 4px 5px;
+    background-color: rgb(92, 92, 92);
+}
+
+/* 디자인 */
+#profile > ul > .my-skill > p > .qual-design::after{
+    content: '';
+    position: absolute; bottom: -2px;
+    width: 80%; height: 8px;
+    background-color: rgb(86, 200, 211);
+}
+
+/* 프론트 */
+#profile > ul > .my-skill > p > .qual-front::after{
+    content: '';
+    position: absolute; bottom: -2px;
+    width: 90%; height: 8px;
+    background-color: rgb(86, 200, 211);
+}
+
+/* 백엔드 */
+#profile > ul > .my-skill > p > .qual-back::after{
+    content: '';
+    position: absolute; bottom: -2px;
+    width: 65%; height: 8px;
+    background-color: rgb(86, 200, 211);
+}
+
+/* 친화력 */
+#profile > ul > .my-skill > p > .qual-friendly::after{
+    content: '';
+    position: absolute; bottom: -2px;
+    width: 100%; height: 8px;
+    background-color: rgb(86, 200, 211);
+}
+
+
+#profile > ul > .my-skill > p > b{
+    display: inline-block;
+    width: 80px;
+    color: rgb(74, 140, 138);
+}
