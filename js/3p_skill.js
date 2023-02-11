@@ -8,7 +8,7 @@ function skillBackOn(){
 		backgroundSize: '100%'
 	},5000);
 	
-    $('.quality').css({
+    $('#skill .quality').css({
         width: "0%"
     }).stop().animate( {
         width: "95%"
@@ -49,7 +49,7 @@ $(function(){
         }
 
         // 스킬채우기    
-        $('.quality').css({
+        $('#skill .quality').css({
             width: "0%"
         }).stop().animate( {
             width: "95%"
