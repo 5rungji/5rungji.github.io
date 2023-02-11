@@ -8,6 +8,11 @@ function skillBackOn(){
 		backgroundSize: '100%'
 	},5000);
 	
+    $('.quality').css({
+        width: "0%"
+    }).stop().animate( {
+        width: "95%"
+    },1000);
 }
 
 function skillBackOff(){
@@ -42,5 +47,12 @@ $(function(){
                 opacity: '0%'
             });               
         }
+
+        // 스킬채우기    
+        $('.quality').css({
+            width: "0%"
+        }).stop().animate( {
+            width: "95%"
+        },1000);
 	});
 });

@@ -69,10 +69,23 @@
     flex-direction: column;
 }
 
+#skill > article > .skill-box > li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* 스킬 퍼센테이지 */
+#skill > article > .skill-box > li > div{
+    width: 60%;
+}
+
 #skill > article > .skill-box img, svg{
-    display: block;
-    width: 50px; height: 50px;
-    margin: 5px;
+    display: inline-block;
+    width: 55px; height: 50px;
+    margin: 5px 10px 5px 0px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 #skill > article > .skill-box svg{
@@ -80,22 +93,125 @@
     background-color: white;
 }
 
+/* 스킬 설명 */
+#skill > article > .skill-box > li > article{
+    width: 40%;
+    padding: 0px 30px;
+}
+
+#skill > article > .skill-box > li p{
+    display: flex;
+}
+
+#skill > article > .skill-box > li .quality{
+    display: inline-block;
+    position: relative;
+    width: 95%; height: 30px;
+    margin: 15px 0px;
+    background-color: rgb(86, 200, 211);
+}
 
 /* Back */
 #skill > article > .skill-box > li:nth-child(1){
     opacity: 100%;
 }
 
+#skill > article > .skill-box > li .qual-java::after{
+    content: '';
+    position: absolute; left: -1px; bottom: -1px;
+    width: 90%; height: 32px;
+    background: linear-gradient(to right, #faffd1, #a1ffce);
+    border-radius: 3px;
+}
+
+#skill > article > .skill-box > li .qual-nodejs::after{
+    content: '';
+    position: absolute; left: -1px; bottom: -1px;
+    width: 30%; height: 32px;
+    background: linear-gradient(to right, #faffd1, #a1ffce);
+    border-radius: 3px;
+}
+
+#skill > article > .skill-box > li .qual-spring::after{
+    content: '';
+    position: absolute; left: -1px; bottom: -1px;
+    width: 70%; height: 32px;
+    background: linear-gradient(to right, #faffd1, #a1ffce);
+    border-radius: 3px;
+}
+
+#skill > article > .skill-box > li .qual-boot::after{
+    content: '';
+    position: absolute; left: -1px; bottom: -1px;
+    width: 70%; height: 32px;
+    background: linear-gradient(to right, #faffd1, #a1ffce);
+    border-radius: 3px;
+}
 
 /* Front */
 #skill > article > .skill-box > li:nth-child(2){
     opacity: 0%;
 }
 
+#skill > article > .skill-box > li .qual-html::after{
+    content: '';
+    position: absolute; left: -1px; bottom: -1px;
+    width: 100%; height: 32px;
+    background: linear-gradient(to right, #faffd1, #a1ffce);
+    border-radius: 3px;
+}
+
+#skill > article > .skill-box > li .qual-css::after{
+    content: '';
+    position: absolute; left: -1px; bottom: -1px;
+    width: 90%; height: 32px;
+    background: linear-gradient(to right, #faffd1, #a1ffce);
+    border-radius: 3px;
+}
+
+#skill > article > .skill-box > li .qual-js::after{
+    content: '';
+    position: absolute; left: -1px; bottom: -1px;
+    width: 70%; height: 32px;
+    background: linear-gradient(to right, #faffd1, #a1ffce);
+    border-radius: 3px;
+}
+
+#skill > article > .skill-box > li .qual-jquery::after{
+    content: '';
+    position: absolute; left: -1px; bottom: -1px;
+    width: 85%; height: 32px;
+    background: linear-gradient(to right, #faffd1, #a1ffce);
+    border-radius: 3px;
+}
 
 /* Design */
 #skill > article > .skill-box > li:nth-child(3){
     opacity: 0%;
+}
+
+#skill > article > .skill-box > li .qual-ps::after{
+    content: '';
+    position: absolute; left: -1px; bottom: -1px;
+    width: 45%; height: 32px;
+    background: linear-gradient(to right, #faffd1, #a1ffce);
+    border-radius: 3px;
+}
+
+#skill > article > .skill-box > li .qual-ai::after{
+    content: '';
+    position: absolute; left: -1px; bottom: -1px;
+    width: 90%; height: 32px;
+    background: linear-gradient(to right, #faffd1, #a1ffce);
+    border-radius: 3px;
+}
+
+#skill > article > .skill-box > li .qual-id::after{
+    content: '';
+    position: absolute; left: -1px; bottom: -1px;
+    width: 70%; height: 32px;
+    background: linear-gradient(to right, #faffd1, #a1ffce);
+    border-radius: 3px;
 }
 
 
