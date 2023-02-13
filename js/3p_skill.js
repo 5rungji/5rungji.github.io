@@ -5,7 +5,7 @@ function skillBackOn(){
 	$('#skill').css({
 		backgroundSize: '300%'
 	}).stop().animate( {
-		backgroundSize: '100%'
+		backgroundSize: '150%'
 	},5000);
 	
     $('#skill .quality').css({
@@ -30,21 +30,27 @@ $(function(){
 
         if($(".back-btn").hasClass("org-btn")){
             $('.skill-box > li:nth-child(1)').css({
-                opacity: '100%'
+                opacity: '100%',
+                zIndex: '1'
             }).siblings().css({
-                opacity: '0%'
+                opacity: '0%',
+                zIndex: '0'
             });            
         }else if($(".front-btn").hasClass("org-btn")){
             $('.skill-box > li:nth-child(2)').css({
-                opacity: '100%'
+                opacity: '100%',
+                zIndex: '1'
             }).siblings().css({
-                opacity: '0%'
+                opacity: '0%',
+                zIndex: '0'
             });                
         }else if($(".desgin-btn").hasClass("org-btn")){
             $('.skill-box > li:nth-child(3)').css({
-                opacity: '100%'
+                opacity: '100%',
+                zIndex: '1'
             }).siblings().css({
-                opacity: '0%'
+                opacity: '0%',
+                zIndex: '0'
             });               
         }
 

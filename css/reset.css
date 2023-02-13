@@ -105,7 +105,7 @@ a:hover{
 }
 
 
-/* 스크롤바 설정*/
+/* 스크롤바 설정 -html 전체-*/
 .scroll{
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -126,4 +126,20 @@ a:hover{
 .custom-scroll > article{
     width: 20%; height: 10px;
     background-color: rgb(86, 200, 211);
+}
+
+
+/* 스크롤바 설정 -article 일부-*/
+.scrollBar { 
+    overflow-y: scroll;
+}
+
+.scrollBar::-webkit-scrollbar {
+    width: 6px;  /* 스크롤바의 너비 */
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+    height: 20%; /* 스크롤바의 길이 */
+    background: rgb(250, 248, 235);
+    border-radius: 10px;
 }
