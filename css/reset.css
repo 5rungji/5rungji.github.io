@@ -25,6 +25,35 @@ html{
     margin: 0 auto;
 }
 
+@media screen and (max-width:1000px) {
+    #wrap{
+        display: none;
+    }
+
+    #mobile-wrap{
+        display: block;
+    }    
+}
+
+@media screen and (min-width:1000px) {
+    #wrap{
+        display: block;
+    }
+
+    #mobile-wrap{
+        display: none;
+    }    
+}
+
+#mobile-wrap{    
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
 body{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px; /* 12px 21px 36px 80px*/
