@@ -5,51 +5,84 @@
 }
 
 /* header *//* header */
-#header {
-    width: 90%; height: 120px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: right;
+/* PC용 */
+@media screen and (min-width:1000px) {
+    #header {
+        width: 90%; height: 120px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: right;
+    }
+    
+    /* menu */
+    #main #header .menu {
+        z-index: 3;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #main #header .menu li {
+        text-align: center;
+        padding: 0px 25px;
+        height: 50px;
+    }
+    
+    #main #header .menu li a {
+        display: block;
+        line-height: 120px;
+        font-size: 16px;
+    }
+
+    /* content1 *//* content1 */
+    #main > p {
+        width: 520px;
+        font-weight: 700;
+        position: absolute;
+        top: 50%; right: 50%;
+        transform: translate(0%, -50%);
+    }
+    
+    #main p {
+        font-size: 50px;
+    }
+    
+    #main span {
+        font-size: 80px;
+    }
+    
+    #main strong {
+        color: rgb(86, 200, 211);
+    }
 }
 
-/* menu */
-#main #header .menu {
-    z-index: 3;
-    display: flex;
-    justify-content: space-between;
+/* 모바일용 */
+@media screen and (max-width:1000px) {
+    #header {
+        display: none;
+    }
+
+    /* content1 *//* content1 */
+    #main > p {
+        width: 40%;
+        font-weight: 700;
+        position: absolute;
+        top: 50%; right: 50%;
+        transform: translate(0%, -50%);
+        background-color: aquamarine;
+    }
+    
+    #main p {
+        font-size: 50px;
+    }
+    
+    #main span {
+        font-size: 80px;
+    }
+    
+    #main strong {
+        color: rgb(86, 200, 211);
+    }
 }
 
-#main #header .menu li {
-    text-align: center;
-    padding: 0px 25px;
-    height: 50px;
-}
 
-#main #header .menu li a {
-    display: block;
-    line-height: 120px;
-    font-size: 16px;
-}
-
-
-/* content1 *//* content1 */
-#main > p {
-    width: 520px;
-    font-weight: 700;
-    position: absolute;
-    top: 50%; right: 50%;
-    transform: translate(0%, -50%);
-}
-
-#main p {
-    font-size: 50px;
-}
-
-#main span {
-    font-size: 80px;
-}
-
-#main strong {
-    color: rgb(86, 200, 211);
-}
 

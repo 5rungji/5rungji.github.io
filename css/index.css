@@ -11,6 +11,54 @@
     top: 0px; left: 0px;
 }
 
+
+/* 스크롤바 설정 -html 전체-*/
+/* PC용 */
+@media screen and (min-width:1000px) {
+    .scroll{
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    
+    .scroll::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    
+    .custom-scroll{
+        position: fixed;
+        bottom: 0px;
+        z-index: 1000;
+        width: 100%; height: 6px;
+        background-color: rgb(74, 140, 138);
+    }
+    
+    .custom-scroll > article{
+        width: 20%; height: 10px;
+        background-color: rgb(86, 200, 211);
+    }
+    
+    
+    /* 스크롤바 설정 -article 일부-*/
+    .scrollBar { 
+        overflow-y: scroll;
+    }
+    
+    .scrollBar::-webkit-scrollbar {
+        width: 6px;  /* 스크롤바의 너비 */
+    }
+    
+    .scrollBar::-webkit-scrollbar-thumb {
+        height: 20%; /* 스크롤바의 길이 */
+        background: rgb(250, 248, 235);
+        border-radius: 10px;
+    }
+}
+
+/* 모바일용 */
+@media screen and (max-width:1000px) {
+}
+
+
 /* 커스텀 커서 *//* 커스텀 커서 */
 .cursor-circle{
     position: absolute;
